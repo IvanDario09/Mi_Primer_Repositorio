@@ -1,0 +1,23 @@
+#pragma once
+#include <iostream>
+#include "Vehiculo.hpp"
+using namespace std;
+
+class Moto: public Vehiculo{
+    private:
+    unsigned int cilindraje;
+
+    public:
+    //Constructor
+    Moto();
+    Moto(string, string, string, unsigned int);
+
+    //Setters
+    void setCilindraje(unsigned int);
+
+    //getters
+    unsigned int getCilindraje();
+
+    //metodos
+    void calcTarifa() override;
+};
