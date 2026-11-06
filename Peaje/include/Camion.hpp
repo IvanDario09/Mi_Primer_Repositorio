@@ -10,7 +10,7 @@ class Camion: public Vehiculo{
     public:
     //Constructor
     Camion();
-    Camion(string, string, string, unsigned int);
+    Camion(string, unsigned int);
 
     //Setters
     void setEjes(unsigned int);
@@ -19,5 +19,5 @@ class Camion: public Vehiculo{
     unsigned int getEjes();
     
     //metodos
-    void calcTarifa() override;
+    void calcTarifa() const override;
 };

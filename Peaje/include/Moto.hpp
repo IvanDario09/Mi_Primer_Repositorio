@@ -10,7 +10,7 @@ class Moto: public Vehiculo{
     public:
     //Constructor
     Moto();
-    Moto(string, string, string, unsigned int);
+    Moto(string,unsigned int);
 
     //Setters
     void setCilindraje(unsigned int);
@@ -19,5 +19,5 @@ class Moto: public Vehiculo{
     unsigned int getCilindraje();
 
     //metodos
-    void calcTarifa() override;
+    void calcTarifa() const override;
 };

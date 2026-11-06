@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "Vehiculo.hpp"
-#include "Ciudadano.hpp"
+
 using namespace std;
 
 class Peaje{
