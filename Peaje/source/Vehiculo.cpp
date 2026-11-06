@@ -15,9 +15,7 @@ void Vehiculo::setPlaca(string){
 string Vehiculo::getPlaca(){return placa;}
 
 //metodos
-/*void Vehiculo::informacionV(){
-    cout << "Modelo: " << getModelo() << endl;
-    cout << "Placa: " << getPlaca() << endl;
-    cout << "Color: " << getColor() << endl;
-}*/
+Vehiculo::~Vehiculo(){}
+string Vehiculo::getTipo(){}
+string Vehiculo::info()const{}
 void Vehiculo::calcTarifa()const{}

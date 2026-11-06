@@ -5,4 +5,4 @@ using namespace std;
 
 const int UNIDAD = 5;
 const int DECENA = 1;
-const int CENTENA =3;
+const int CENTENA =5;
