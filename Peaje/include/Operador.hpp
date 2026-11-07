@@ -8,7 +8,7 @@ class Operador : public Persona{
     public:
     //Constructor
     Operador();
-    Operador(string);
+    Operador(string, string, string,string,string);
 
     //Setters
     void setCodigo(string);

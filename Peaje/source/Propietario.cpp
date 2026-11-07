@@ -1,8 +1,8 @@
 #include "../include/Propietario.hpp"
 
 //Constructor
-Propietario::Propietario():vecino(1){}
-Propietario::Propietario(bool vecino):vecino(vecino){}
+Propietario::Propietario():Persona(),vecino(1){}
+Propietario::Propietario(string id, string nombre, string fechaNacimiento,string ciudad,bool vecino): Persona(id,nombre,fechaNacimiento,ciudad),vecino(vecino){}
 
 //Setters
 void Propietario::setVecino(bool vecino){this->vecino = vecino;}

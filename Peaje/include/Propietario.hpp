@@ -10,7 +10,7 @@ class Propietario : public Persona{
     public:
     //Constructor
     Propietario();
-    Propietario(bool);
+    Propietario(string, string, string,string,bool);
 
     //Setters
     void setVecino(bool);

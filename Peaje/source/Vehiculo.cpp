@@ -1,7 +1,7 @@
 #include "../include/Vehiculo.hpp"
 
 //Constructor
-Vehiculo::Vehiculo(): placa(""){}
+Vehiculo::Vehiculo(): placa("ABC000"){}
 Vehiculo::Vehiculo(string placa): placa(placa){}
 
 //Setters
@@ -16,6 +16,6 @@ string Vehiculo::getPlaca(){return placa;}
 
 //metodos
 Vehiculo::~Vehiculo(){}
-string Vehiculo::getTipo(){}
+string Vehiculo::getTipo()const{}
 string Vehiculo::info()const{}
 void Vehiculo::calcTarifa()const{}
