@@ -1,8 +1,8 @@
-#include "../cabecera/Moto.hpp"
+#include "../include/Moto.hpp"
 
 //Constructor
 Moto::Moto(): Vehiculo(){}
-Moto::Moto(string modelo, string placa, string color, unsigned int cilindraje) : Vehiculo(modelo, placa, color),cilindraje(cilindraje){}
+Moto::Moto(string placa, unsigned int cilindraje) : Vehiculo(placa),cilindraje(cilindraje){}
 
 //setters
 void Moto::setCilindraje(unsigned int cilindraje){this->cilindraje = cilindraje;}
@@ -10,4 +10,14 @@ void Moto::setCilindraje(unsigned int cilindraje){this->cilindraje = cilindraje;
 unsigned int Moto::getCilindraje(){return cilindraje;}
 
 //metodos
-void Moto::calcTarifa(){};
+string Moto::getTipo()const{return " Moto ";}
+string Moto::info() const{}
+Moto::~Moto(){cout <<getTipo<<" "<<getPlaca()<<endl;}
+void Moto::calcTarifa()const{
+    int tarifa; int descuento;
+    tarifa = 3000 + 100*U; // modificar persona
+    if((propietario != nullptr) && (propietario->getVecino())){
+        descuento=(30+C);
+        tarifa *(100 - descuento)/100;
+    }
+};

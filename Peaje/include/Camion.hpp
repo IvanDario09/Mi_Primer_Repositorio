@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "Vehiculo.hpp"
 using namespace std;
 
@@ -20,4 +19,7 @@ class Camion: public Vehiculo{
     
     //metodos
     void calcTarifa() const override;
+    string getTipo()const override;
+    string info() const override;
+    ~Camion()override;
 };

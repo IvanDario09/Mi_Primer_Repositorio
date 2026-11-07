@@ -1,8 +1,6 @@
 #pragma once
-#include <iostream>
 #include "Vehiculo.hpp"
 #include "Persona.hpp"
-#include <vector>
 using namespace std;
 
 class Coche: public Vehiculo{
@@ -23,4 +21,5 @@ class Coche: public Vehiculo{
     void calcTarifa() const override;
     string getTipo()const override;
     string info() const override;
+    ~Coche()override;
 };

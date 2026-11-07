@@ -1,7 +1,7 @@
 #include "../include/Propietario.hpp"
 
 //Constructor
-Propietario::Propietario():Persona(),vecino(1){}
+Propietario::Propietario():Persona(),vecino(0){}
 Propietario::Propietario(string id, string nombre, string fechaNacimiento,string ciudad,bool vecino): Persona(id,nombre,fechaNacimiento,ciudad),vecino(vecino){}
 
 //Setters

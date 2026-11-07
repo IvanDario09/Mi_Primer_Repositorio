@@ -1,6 +1,4 @@
 #pragma once
-#include <iostream>
-#include <vector>
 #include "../include/Vehiculo.hpp"
 using namespace std;
 
@@ -21,4 +19,7 @@ class Bus: public Vehiculo{
     //metodos
     void calcTarifa() const override;
     string info() const override;
+    string getTipo() const override;
+    ~Bus()override;
+
 };

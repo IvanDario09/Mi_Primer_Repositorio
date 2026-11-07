@@ -1,5 +1,4 @@
 #include "../include/Coche.hpp"
-#include "../include/Variante.hpp"
 
 //Constructor
 Coche::Coche(): Vehiculo(), pasajeros(1){}
@@ -16,9 +15,14 @@ void Coche::setPasajero(unsigned int pasajeros){ //si quiero luego hacerlo con +
 unsigned int Coche::getPasajero()const{return pasajeros;}
 
 //metodos
+string Coche::getTipo()const{return " Coche ";}
 void Coche::calcTarifa()const{
-    double tarifa;
+    int tarifa; int descuento;
     tarifa = 10000 + 200*U; // modificar persona
+    if((propietario != nullptr) && (propietario->getVecino())){
+        descuento=(30+C);
+        tarifa *(100 - descuento)/100;
+    }
 }
-
-string Coche::getTipo()const{return "Coche";}
+string Coche::info()const{}
+Coche::~Coche(){cout << getTipo()<<" "<<getPlaca()<<endl;}
