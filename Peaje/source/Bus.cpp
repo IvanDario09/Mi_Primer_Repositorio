@@ -1,7 +1,7 @@
 #include "../include/Bus.hpp"
 
 //Constructor
-Bus::Bus():Vehiculo(),puestos(0){}
+Bus::Bus():Vehiculo(),puestos(1){}
 Bus::Bus(string placa,unsigned int puestos):Vehiculo(placa),puestos(puestos){}
 
 //Setters

@@ -1,7 +1,7 @@
 #include "../include/Camion.hpp"
     
 //Constructor
-Camion::Camion(): Vehiculo(), ejes(){}
+Camion::Camion(): Vehiculo(), ejes(2){}
 Camion::Camion(string placa, unsigned int ejes) : Vehiculo(placa),ejes(ejes){}
 
 //setters

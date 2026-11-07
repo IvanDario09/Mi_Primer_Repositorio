@@ -1,5 +1,5 @@
 #pragma once
-#include "../include/Vehiculo.hpp"
+#include "Vehiculo.hpp"
 using namespace std;
 
 class Bus: public Vehiculo{

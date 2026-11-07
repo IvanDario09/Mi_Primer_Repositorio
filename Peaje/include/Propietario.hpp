@@ -1,6 +1,6 @@
 #pragma once
-#include "../include/Persona.hpp"
-#include "../include/Coche.hpp"
+#include "Persona.hpp"
+#include "Coche.hpp"
 
 class Propietario : public Persona{
     private:

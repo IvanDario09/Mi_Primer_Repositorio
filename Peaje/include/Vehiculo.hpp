@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "../include/Propietario.hpp"
-#include "../include/Variante.hpp"
+#include "Propietario.hpp"
+#include "Variante.hpp"
 
 using namespace std;
 

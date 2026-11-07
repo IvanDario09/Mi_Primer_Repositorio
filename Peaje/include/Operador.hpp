@@ -1,5 +1,5 @@
 #pragma once
-#include "../include/Persona.hpp"
+#include "Persona.hpp"
 
 class Operador : public Persona{
     private:
