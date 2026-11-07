@@ -3,6 +3,6 @@
 #include <string>
 using namespace std;
 
-const int UNIDAD = 5;
-const int DECENA = 1;
-const int CENTENA =5;
+const int U = 5; //Unidad
+const int D = 1; //Decena
+const int C =5; //Centena

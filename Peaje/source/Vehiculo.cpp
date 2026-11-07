@@ -7,7 +7,7 @@ Vehiculo::Vehiculo(string placa): placa(placa){}
 //Setters
 void Vehiculo::setPlaca(string){
     if (placa.length()<4){
-        cout <<"La placa debe tener al menos 6 caracteres" <<endl;
+        cout <<"La placa debe tener al menos 4 caracteres" <<endl;
     }else{this->placa = placa;};
 }
 

@@ -1,21 +1,24 @@
-#include "../cabecera/Coche.hpp"
+#include "../include/Coche.hpp"
+#include "../include/Variante.hpp"
 
 //Constructor
-Coche::Coche(): Vehiculo(){}
-Coche::Coche(string modelo, string placa, string color) : Vehiculo(modelo, placa, color){}
+Coche::Coche(): Vehiculo(), pasajeros(1){}
+Coche::Coche(string placa, unsigned int pasajeros) : Vehiculo(placa), pasajeros(pasajeros){}
+
+//Setters
+void Coche::setPasajero(unsigned int pasajeros){ //si quiero luego hacerlo con +=
+    if (pasajeros>2){  //Posible Exception
+        cout << "El coche solo puede tener 2 pasajeros" << endl;
+    }else{this->pasajeros = pasajeros;}
+}
 
 //getters
-vector<Ciudadano*> Coche::getPasajero(){return pasajeros;}
+unsigned int Coche::getPasajero()const{return pasajeros;}
 
 //metodos
-Coche&Coche:: operator+=(Ciudadano* unCiudadano){
-    for (unsigned int i=0; i<pasajeros.size();i++){
-        if(unCiudadano->getId() == pasajeros[i]->getId()){
-            cout << "El ciudadano ya se encuentra en el registro"<<endl;
-            return *this;
-        }
-    }
-    pasajeros.push_back(unCiudadano);
-    return *this;
+void Coche::calcTarifa()const{
+    double tarifa;
+    tarifa = 10000 + 200*U; // modificar persona
 }
-void Coche::calcTarifa(){}
+
+string Coche::getTipo()const{return "Coche";}

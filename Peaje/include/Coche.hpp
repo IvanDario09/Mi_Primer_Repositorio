@@ -15,12 +15,12 @@ class Coche: public Vehiculo{
     Coche(string,unsigned int);
 
     //Setters
-    void setPasajeros(unsigned int);
+    void setPasajero(unsigned int);
     //getters
-    int getPasajero() const;
+    unsigned int getPasajero() const;
 
     //metodos
-    Coche& operator+=(Ciudadano*);
     void calcTarifa() const override;
+    string getTipo()const override;
     string info() const override;
 };

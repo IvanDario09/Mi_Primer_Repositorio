@@ -21,7 +21,7 @@ class Vehiculo{
     //metodos
     virtual void calcTarifa() const;
     virtual ~Vehiculo();
-    virtual string getTipo();//const=0
+    virtual string getTipo()const=0;
     virtual string info()const;
 };
 
