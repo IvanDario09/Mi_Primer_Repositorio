@@ -1,10 +1,11 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "Propietario.hpp"
 #include "Variante.hpp"
 
 using namespace std;
+
+class Propietario;
 
 class Vehiculo{
     protected:
@@ -27,7 +28,7 @@ class Vehiculo{
     //metodos
     virtual void calcTarifa() const;
     virtual ~Vehiculo();
-    virtual string getTipo()const=0;
+    virtual string getTipo()const = 0;
     virtual string info()const;
 };
 

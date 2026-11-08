@@ -1,7 +1,8 @@
 #pragma once
 #include "Persona.hpp"
-#include "Coche.hpp"
 
+class Persona;
+class Coche;
 class Propietario : public Persona{
     private:
     Coche* miCoche;
@@ -10,7 +11,7 @@ class Propietario : public Persona{
     public:
     //Constructor
     Propietario();
-    Propietario(string, string, string,string,bool);
+    Propietario(string, string, string,bool);
 
     //Setters
     void setVecino(bool);
@@ -21,4 +22,6 @@ class Propietario : public Persona{
 
     //Metodos
     void asignarCoche(Coche*);
+    string descripcionPersona()override;
+    ~Propietario()override;
 };

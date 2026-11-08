@@ -2,6 +2,7 @@
 #include "Vehiculo.hpp"
 using namespace std;
 
+class Vehiculo;
 class Moto: public Vehiculo{
     private:
     unsigned int cilindraje;

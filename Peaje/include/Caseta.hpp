@@ -1,11 +1,11 @@
 #pragma once
-#include <vector>
-#include "Vehiculo.hpp"
-#include "Operador.hpp"
+#include <iostream>
+#include <string>
 
 using namespace std;
 /*La caseta sabe cuántos
 pasos lleva, cuánto dinero ha recaudado y cuántos vehículos de cada categoría han pasado.*/
+class Operador;
 class Caseta{
     private:
     string nombre;

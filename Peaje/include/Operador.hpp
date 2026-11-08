@@ -8,11 +8,15 @@ class Operador : public Persona{
     public:
     //Constructor
     Operador();
-    Operador(string, string, string,string,string);
+    Operador(string, string, string,string);
 
     //Setters
     void setCodigo(string);
 
     //Getters
     string getCodigo();
+
+    //Metodos
+    string descripcionPersona()override;
+    ~Operador()override;
 };

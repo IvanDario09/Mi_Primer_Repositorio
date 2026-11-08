@@ -1,6 +1,5 @@
 #pragma once
 #include "Vehiculo.hpp"
-#include "Persona.hpp"
 using namespace std;
 
 class Coche: public Vehiculo{
