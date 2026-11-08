@@ -12,6 +12,9 @@ unsigned int Camion::getEjes(){return ejes;}
 
 //metodos
 void Camion::calcTarifa() const{int tarifa=8000+(100*D);}
+
 string Camion::getTipo()const{return " Camion ";}
-string Camion::info() const{}
+
+string Camion::info() const{return Vehiculo::info() + " | Ejes: " + to_string(ejes);}
+
 Camion::~Camion(){ cout << getTipo() <<" "<<getPlaca()<<endl;}

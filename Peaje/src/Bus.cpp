@@ -11,6 +11,6 @@ int Bus::getPuesto() const{return puestos;}
 
 //metodos
 void Bus::calcTarifa() const{int tarifa=14000+(300*D);}
-string Bus::info() const{}
+string Bus::info() const{return Vehiculo::info() + " | N° puestos: " + to_string(puestos);}
 string Bus::getTipo() const{return " Bus ";}
 Bus::~Bus(){cout << Bus::getTipo()<<" "<< placa <<endl;}

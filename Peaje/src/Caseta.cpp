@@ -1,6 +1,5 @@
 #include "Caseta.hpp"
 #include "Vehiculo.hpp"
-#include "Operador.hpp"
 
 //Constructor
 Caseta::Caseta():nombre(""),cochesRegistrados(0),camionesRegistrados(0),motosRegistradas(0),BusesRegistrados(0){}
@@ -22,3 +21,4 @@ int Caseta::getBusesRegistrados(){return BusesRegistrados;}
 
 //Metodos
 void Caseta::cobrarPeaje(){}
+Caseta::~Caseta(){}

@@ -22,8 +22,8 @@ void Coche::calcTarifa()const{
     tarifa = 10000 + 200*U; // modificar persona
     if((propietario != nullptr) && (propietario->getVecino())){
         descuento=(30+C);
-        tarifa *(100 - descuento)/100;
+        tarifa= tarifa*(100 - descuento)/100;
     }
 }
-string Coche::info()const{}
-Coche::~Coche(){cout << getTipo()<<" "<<getPlaca()<<endl;}
+string Coche::info()const{return Vehiculo::info() + " | Pasajeros: " + to_string(pasajeros);}
+Coche::~Coche(){cout << getTipo()<<" "<< placa<<endl;}

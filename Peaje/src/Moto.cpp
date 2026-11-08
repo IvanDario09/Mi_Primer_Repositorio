@@ -12,13 +12,20 @@ unsigned int Moto::getCilindraje(){return cilindraje;}
 
 //metodos
 string Moto::getTipo()const{return " Moto ";}
-string Moto::info() const{}
+
+string Moto::info() const{
+    string cil = "Bajo cilindraje";
+    if(cilindraje>=400){cil="Alto cilindraje";}
+    return Vehiculo::info() + " | Cilindraje:" + to_string(cilindraje) + " "+ cil;
+}
+
 Moto::~Moto(){cout << Moto::getTipo() <<" "<< placa <<endl;}
+
 void Moto::calcTarifa()const{
     int tarifa; int descuento;
     tarifa = 3000 + 100*U; // modificar persona
     if((propietario != nullptr) && (propietario->getVecino())){
         descuento=(30+C);
-        tarifa *(100 - descuento)/100;
+        tarifa=tarifa *(100 - descuento)/100;
     }
 };

@@ -9,7 +9,7 @@ void Operador::setCodigo(string codigo){this->codigo = codigo;}
 
 //Getters
 string Operador::getCodigo(){return codigo;}
-string Operador::descripcionPersona(){return Persona::descripcionPersona() + getCodigo();}
+string Operador::descripcionPersona(){return Persona::descripcionPersona() + " Codigo empleado: " + getCodigo();}
 
 //Metodos
 Operador::~Operador(){}

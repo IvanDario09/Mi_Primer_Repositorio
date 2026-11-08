@@ -1,7 +1,7 @@
 #include "Persona.hpp"
 
 //Constructor
-Persona::Persona(): id(""), nombre(""), fechaNacimiento("01,01,1930"){}
+Persona::Persona(): id(""), nombre(""), fechaNacimiento("01/01/1930"){}
 Persona::Persona(string id, string nombre, string fechaNacimiento): id(id),nombre(nombre),fechaNacimiento(fechaNacimiento){}
 
 //Setters

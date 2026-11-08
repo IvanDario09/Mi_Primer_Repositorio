@@ -24,5 +24,9 @@ Propietario* Vehiculo::getPropietario(){return propietario;}
 //metodos
 Vehiculo::~Vehiculo(){cout <<"Destruyendo ";}
 string Vehiculo::getTipo()const{}
-string Vehiculo::info()const{}
+string Vehiculo::info()const{return getTipo()+ "| Placa: " + placa ;}
 void Vehiculo::calcTarifa()const{}
+
+
+//Cout para los vehiculos
+ostream &operator << (ostream &os, Vehiculo &unVehiculo){return os << unVehiculo.info()<<endl;}

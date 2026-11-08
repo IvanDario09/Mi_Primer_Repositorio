@@ -14,6 +14,7 @@ class Caseta{
     int camionesRegistrados;
     int motosRegistradas;
     int BusesRegistrados;
+    double totalRegistrado;
 
     public:
     //Constructor
@@ -26,6 +27,7 @@ class Caseta{
     void setCamionesRegistrados(int);
     void setMotosRegistrados(int);
     void setBusesRegistrados(int);
+    void asignarOperador(Operador*);
 
     //Getters
     string getNombre();
@@ -34,8 +36,10 @@ class Caseta{
     int getCamionesRegistrados();
     int getMotosRegistrados();
     int getBusesRegistrados();
+    Operador* getOperador();
 
     //Metodos
     void cobrarPeaje();
+    ~Caseta();
 
 };
