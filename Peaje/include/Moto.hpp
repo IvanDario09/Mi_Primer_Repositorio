@@ -19,7 +19,7 @@ class Moto: public Vehiculo{
     unsigned int getCilindraje();
 
     //metodos
-    void calcTarifa() const override;
+    int calcTarifa() const override;
     string getTipo()const override;
     string info() const override;
     ~Moto()override;

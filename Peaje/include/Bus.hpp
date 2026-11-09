@@ -17,7 +17,7 @@ class Bus: public Vehiculo{
     int getPuesto() const;
 
     //metodos
-    void calcTarifa() const override;
+    int calcTarifa() const override;
     string info() const override;
     string getTipo() const override;
     ~Bus()override;

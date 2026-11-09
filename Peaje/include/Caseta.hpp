@@ -1,19 +1,23 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 /*La caseta sabe cuántos
 pasos lleva, cuánto dinero ha recaudado y cuántos vehículos de cada categoría han pasado.*/
+
+class Registro;
 class Operador;
 class Caseta{
     private:
     string nombre;
     Operador* operador;
+    vector<Registro*> registros;
     int cochesRegistrados;
     int camionesRegistrados;
     int motosRegistradas;
-    int BusesRegistrados;
+    int busesRegistrados;
     double totalRegistrado;
 
     public:
@@ -37,6 +41,7 @@ class Caseta{
     int getMotosRegistrados();
     int getBusesRegistrados();
     Operador* getOperador();
+    vector<Registro*> getRegistro();
 
     //Metodos
     void cobrarPeaje();

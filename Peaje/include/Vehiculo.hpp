@@ -26,10 +26,10 @@ class Vehiculo{
     Propietario* getPropietario();
 
     //metodos
-    virtual void calcTarifa() const;
+    virtual int calcTarifa() const;
     virtual ~Vehiculo();
     virtual string getTipo()const = 0;
     virtual string info()const;
 };
 
-ostream &operator << (ostream &os, Vehiculo &unVehiculo);
+ostream &operator << (ostream, Vehiculo);

@@ -17,13 +17,14 @@ unsigned int Coche::getPasajero()const{return pasajeros;}
 
 //metodos
 string Coche::getTipo()const{return " Coche ";}
-void Coche::calcTarifa()const{
+int Coche::calcTarifa()const{
     int tarifa; int descuento;
     tarifa = 10000 + 200*U; // modificar persona
     if((propietario != nullptr) && (propietario->getVecino())){
         descuento=(30+C);
         tarifa= tarifa*(100 - descuento)/100;
     }
+    return tarifa;
 }
 string Coche::info()const{return Vehiculo::info() + " | Pasajeros: " + to_string(pasajeros);}
 Coche::~Coche(){cout << getTipo()<<" "<< placa<<endl;}

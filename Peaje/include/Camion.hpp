@@ -18,7 +18,7 @@ class Camion: public Vehiculo{
     unsigned int getEjes();
     
     //metodos
-    void calcTarifa() const override;
+    int calcTarifa() const override;
     string getTipo()const override;
     string info() const override;
     ~Camion()override;

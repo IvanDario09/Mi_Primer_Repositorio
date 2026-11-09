@@ -10,7 +10,7 @@ Vehiculo::Vehiculo(string placa){
 }
 
 //Setters
-void Vehiculo::setPlaca(string){
+void Vehiculo::setPlaca(string placa){
     if (placa.length()<6){
         cout <<"La placa debe tener al menos 6 caracteres" <<endl; //exception
     }else{this->placa = placa;};
@@ -23,9 +23,9 @@ Propietario* Vehiculo::getPropietario(){return propietario;}
 
 //metodos
 Vehiculo::~Vehiculo(){cout <<"Destruyendo ";}
-string Vehiculo::getTipo()const{}
+string Vehiculo::getTipo()const{ return "Vehículo: ";}
 string Vehiculo::info()const{return getTipo()+ "| Placa: " + placa ;}
-void Vehiculo::calcTarifa()const{}
+int Vehiculo::calcTarifa()const{}
 
 
 //Cout para los vehiculos

@@ -17,7 +17,7 @@ class Coche: public Vehiculo{
     unsigned int getPasajero() const;
 
     //metodos
-    void calcTarifa() const override;
+    int calcTarifa() const override;
     string getTipo()const override;
     string info() const override;
     ~Coche()override;
