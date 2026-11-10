@@ -13,4 +13,4 @@ int Bus::getPuesto() const{return puestos;}
 int Bus::calcTarifa() const{return 14000+(300*D);}
 string Bus::info() const{return Vehiculo::info() + " | N° puestos: " + to_string(puestos);}
 string Bus::getTipo() const{return " Bus ";}
-Bus::~Bus(){cout << Bus::getTipo()<<" "<< placa <<endl;}
+Bus::~Bus(){cout << getTipo()<<" "<< placa <<endl;}

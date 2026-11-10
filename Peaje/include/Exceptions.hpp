@@ -8,22 +8,22 @@ class ExcepcionPlaca : public exception{
     private:
     string msj;
     public:
-    ExcepcionPlaca(string msj):msj(msj){}
-    const char* what() const noexcept override{return msj.c_str();}
+    ExcepcionPlaca(string);
+    const char* what() const noexcept override;
 };
 
 class ExcepcionDatosInvalidos : public exception{
     private:
     string msj;
     public:
-    ExcepcionDatosInvalidos(string msj):msj(msj){}
-    const char* what() const noexcept override{return msj.c_str();}
+    ExcepcionDatosInvalidos(string msj);
+    const char* what() const noexcept override;
 };
 
 class ExcepcionDescuadreCaja : public exception{
     private:
     string msj;
     public:
-    ExcepcionDescuadreCaja(string msj):msj(msj){}
-    const char* what() const noexcept override{return msj.c_str();}
+    ExcepcionDescuadreCaja(string msj);
+    const char* what() const noexcept override;
 };

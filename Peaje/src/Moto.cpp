@@ -23,7 +23,7 @@ Moto::~Moto(){cout << Moto::getTipo() <<" "<< placa <<endl;}
 
 int Moto::calcTarifa()const{
     int tarifa; int descuento;
-    tarifa = 3000 + 100*U; // modificar persona
+    tarifa = 3000 + 100*U;
     if((propietario != nullptr) && (propietario->getVecino())){
         descuento=(30+C);
         tarifa=tarifa *(100 - descuento)/100;
