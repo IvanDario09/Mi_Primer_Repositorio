@@ -1,28 +1,29 @@
 #include "Vehiculo.hpp"
 #include "Propietario.hpp"
+#include "Exceptions.hpp"
 
 //Constructor
 Vehiculo::Vehiculo(): placa("ABC000"),propietario(nullptr){}
 Vehiculo::Vehiculo(string placa){
-    if(placa.length()<6){
-        //exception
-    }else{this->placa = placa;}
+    if(placa.length()<1){throw ExcepcionPlaca("La placa no puede estar vacia");}
+    if(placa.length()>6){throw ExcepcionPlaca("La placa no puede tener mas de 6 caractéres");}
+    this->placa = placa;
 }
 
 //Setters
 void Vehiculo::setPlaca(string placa){
-    if (placa.length()<6){
-        cout <<"La placa debe tener al menos 6 caracteres" <<endl; //exception
-    }else{this->placa = placa;};
+    if(placa.length()<1){throw ExcepcionPlaca("La placa no puede estar vacia");}
+    if(placa.length()>6){throw ExcepcionPlaca("La placa no puede tener mas de 6 caractéres");}
+    this->placa = placa;
 }
-void Vehiculo::asignarPropietario(Propietario* unPropietario){this->propietario = unPropietario;}
+void Vehiculo::asignarPropietario(Propietario* unPropietario){propietario = unPropietario;}
 
 //getters
 string Vehiculo::getPlaca(){return placa;}
 Propietario* Vehiculo::getPropietario(){return propietario;}
 
 //metodos
-Vehiculo::~Vehiculo(){cout <<"Destruyendo ";}
+Vehiculo::~Vehiculo(){cout <<"Destruyendo: ";}
 string Vehiculo::getTipo()const{ return "Vehículo: ";}
 string Vehiculo::info()const{return getTipo()+ "| Placa: " + placa ;}
 int Vehiculo::calcTarifa()const{};

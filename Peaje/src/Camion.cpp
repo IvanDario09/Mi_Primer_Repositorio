@@ -1,11 +1,19 @@
 #include "Camion.hpp"
-
+#include "Exceptions.hpp"
 //Constructor
 Camion::Camion(): Vehiculo(), ejes(2){}
-Camion::Camion(string placa, unsigned int ejes) : Vehiculo(placa){if(ejes>3){cout <<"un camión no puede tener mas de 3 ejes"<<endl;}else{this->ejes=ejes;}}
+Camion::Camion(string placa, unsigned int ejes) : Vehiculo(placa){
+    if(ejes>3){throw ExcepcionDatosInvalidos("un camión no puede tener mas de 3 ejes");}
+    if(ejes<1){throw ExcepcionDatosInvalidos("un camión no puede tener menos de 1 eje");}
+    this->ejes=ejes;
+}
 
 //setters
-void Camion::setEjes(unsigned int ejes){if(ejes>3){cout <<"un camión no puede tener mas de 3 ejes"<<endl;}else{this->ejes=ejes;}}//Exception
+void Camion::setEjes(unsigned int ejes){
+    if(ejes>3){throw ExcepcionDatosInvalidos("un camión no puede tener mas de 3 ejes");}
+    if(ejes<1){throw ExcepcionDatosInvalidos("un camión no puede tener menos de 1 eje");}
+    this->ejes=ejes;
+}
 
 //getters
 unsigned int Camion::getEjes(){return ejes;}

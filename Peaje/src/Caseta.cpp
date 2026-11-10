@@ -26,23 +26,10 @@ vector<Registro*> Caseta::getRegistro(){return registros;}
 //Metodos
 void Caseta::agregarRegistro(Registro* unRegistro){
     string cat = unRegistro->getCategoria();
-    switch(cat[1]){
-        case 'C':
-            cochesRegistrados++;
-            break;
-        case 'M':
-            motosRegistradas++;
-            break;
-        case 'B':
-            busesRegistrados++;
-            break;
-        case 'T':
-            camionesRegistrados++;
-            break;
-        default:
-        cout <<"hola"<<endl;
-        //Exception 
-    }
+    if(cat==" Coche "){cochesRegistrados++;}
+    if(cat==" Camion "){camionesRegistrados++;}
+    if(cat==" Moto "){motosRegistradas++;}
+    if(cat==" Bus "){busesRegistrados++;}
     registros.push_back(unRegistro);
 }
 
