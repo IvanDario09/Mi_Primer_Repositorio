@@ -35,9 +35,6 @@ int main() {
     //Tarifa
     m1->calcTarifa();
 
-
-    
-
 }
 
 //TODO placa valida, (try/catch), menos de 4 caracteres, heredar de excepcion

@@ -7,6 +7,7 @@ using namespace std;
 /*La caseta sabe cuántos
 pasos lleva, cuánto dinero ha recaudado y cuántos vehículos de cada categoría han pasado.*/
 
+class Vehiculo;
 class Registro;
 class Operador;
 class Caseta{
@@ -18,7 +19,7 @@ class Caseta{
     int camionesRegistrados;
     int motosRegistradas;
     int busesRegistrados;
-    double totalRegistrado;
+    int totalRegistrado;
 
     public:
     //Constructor
@@ -31,6 +32,7 @@ class Caseta{
     void setCamionesRegistrados(int);
     void setMotosRegistrados(int);
     void setBusesRegistrados(int);
+    void setTotalRegistrado(int);
     void asignarOperador(Operador*);
 
     //Getters
@@ -40,11 +42,12 @@ class Caseta{
     int getCamionesRegistrados();
     int getMotosRegistrados();
     int getBusesRegistrados();
+    int getTotalRegistrado();
     Operador* getOperador();
     vector<Registro*> getRegistro();
 
     //Metodos
-    void cobrarPeaje();
+    void agregarRegistro(Registro*);
+    void cobrarPeaje(Vehiculo*);
     ~Caseta();
-
 };

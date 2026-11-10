@@ -32,4 +32,4 @@ class Vehiculo{
     virtual string info()const;
 };
 
-ostream &operator << (ostream, Vehiculo);
+ostream &operator << (ostream &os, Vehiculo &unVehiculo);
