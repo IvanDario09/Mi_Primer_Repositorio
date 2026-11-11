@@ -7,9 +7,11 @@ Coche::Coche(): Vehiculo(), pasajeros(1){}
 Coche::Coche(string placa, unsigned int pasajeros) : Vehiculo(placa), pasajeros(pasajeros){}
 
 //Setters
-void Coche::setPasajero(unsigned int pasajeros){ //si quiero luego hacerlo con +=
-    if (pasajeros>2){ throw ExcepcionDatosInvalidos("El coche solo puede tener 2 pasajeros");
-    }else{this->pasajeros = pasajeros;}
+void Coche::setPasajero(unsigned int pasajeros){
+    try{
+        if (pasajeros>2){throw ExcepcionDatosInvalidos("El coche solo puede tener 2 pasajeros");}
+    }catch(const exception& e){cout << "Error: " << e.what()<<endl;}
+    this->pasajeros = pasajeros;
 }
 
 //getters

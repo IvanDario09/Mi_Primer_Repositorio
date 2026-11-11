@@ -5,15 +5,19 @@
 //Constructor
 Vehiculo::Vehiculo(): placa("ABC000"),propietario(nullptr){}
 Vehiculo::Vehiculo(string placa){
-    if(placa.length()<1){throw ExcepcionPlaca("La placa no puede estar vacia");}
-    if(placa.length()>6){throw ExcepcionPlaca("La placa no puede tener mas de 6 caractéres");}
+    try{
+        if(placa.length()<1){throw ExcepcionPlaca("La placa no puede estar vacia");}
+        if(placa.length()>6){throw ExcepcionPlaca("La placa no puede tener mas de 6 caractéres");}
+    }catch(const exception& e){cout<<"Error: "<<e.what()<<endl;}
     this->placa = placa;
 }
 
 //Setters
 void Vehiculo::setPlaca(string placa){
-    if(placa.length()<1){throw ExcepcionPlaca("La placa no puede estar vacia");}
-    if(placa.length()>6){throw ExcepcionPlaca("La placa no puede tener mas de 6 caractéres");}
+    try{
+        if(placa.length()<1){throw ExcepcionPlaca("La placa no puede estar vacia");}
+        if(placa.length()>6){throw ExcepcionPlaca("La placa no puede tener mas de 6 caractéres");}
+    }catch(const exception& e){cout<<"Error: "<<e.what()<<endl;}
     this->placa = placa;
 }
 void Vehiculo::asignarPropietario(Propietario* unPropietario){propietario = unPropietario;}

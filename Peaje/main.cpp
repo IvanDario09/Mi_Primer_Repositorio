@@ -8,6 +8,8 @@
 #include "Operador.hpp"
 
 int main() {
+    vector<Persona*> humanidad;
+    vector<Vehiculo*> vehiculos;
     // Crear un ciudadano
     Persona* p1= new Persona("1059242276","Jimmy","25/04/2025");
     cout << p1->descripcionPersona()<<endl;
