@@ -4,12 +4,17 @@
 
 //Constructor
 Coche::Coche(): Vehiculo(), pasajeros(1){}
-Coche::Coche(string placa, unsigned int pasajeros) : Vehiculo(placa), pasajeros(pasajeros){}
+Coche::Coche(string placa, unsigned int pasajeros): Vehiculo(placa){
+    try{
+        if (pasajeros<1){throw ExcepcionDatosInvalidos("El coche debe tener al menos 1 pasajero");}
+    }catch(const exception& e){cout << "Error: " << e.what()<<endl;}
+    this->pasajeros = pasajeros;
+}
 
 //Setters
 void Coche::setPasajero(unsigned int pasajeros){
     try{
-        if (pasajeros>2){throw ExcepcionDatosInvalidos("El coche solo puede tener 2 pasajeros");}
+        if (pasajeros<1){throw ExcepcionDatosInvalidos("El coche debe tener al menos 1 pasajero");}
     }catch(const exception& e){cout << "Error: " << e.what()<<endl;}
     this->pasajeros = pasajeros;
 }

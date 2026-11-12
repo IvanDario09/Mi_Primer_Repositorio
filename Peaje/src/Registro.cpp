@@ -15,7 +15,7 @@ string Registro::getCategoria()const{return categoria;}
 int Registro::getPrecioRegistro()const{return precioRegistro;}
 
 //Metodos
-string Registro::info()const{return "| Placa: " + placa + " | " + "Categoria:" + categoria + " | ";}
+string Registro::info()const{return "| Placa: " + placa + " | " + "Categoria:" + categoria + " | " + "Precio: " + to_string(precioRegistro);}
 Registro::~Registro(){}
 
 ostream &operator << (ostream &os, Registro &unRegistro){return os<<unRegistro.info()<<endl;}

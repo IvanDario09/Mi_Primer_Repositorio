@@ -18,18 +18,25 @@ int main() {
     cout << "===================================="<<endl;
     Operador* op= new Operador("2525","1059242276","Jimmy","25/04/2009");
     cout << op->descripcionPersona()<<endl;
+    humanidad.push_back(op);
     cout<<"========================================"<<endl;
-    Propietario* pVec= new Propietario("1080900112","Carlos","19/03/2002",0);
+    Propietario* pVec= new Propietario("1080900112","Carlos","19/03/2002",1);
     cout << pVec->descripcionPersona()<<endl;
+    humanidad.push_back(pVec);
     cout<<"========================================"<<endl;
-    Propietario* pNoVec= new Propietario("2529222222","Carlos","",1);
+    Propietario* pNoVec= new Propietario("2529222222","Carlos","03/15/2004",0);
     cout << pNoVec->descripcionPersona()<<endl;
+    humanidad.push_back(pNoVec);
     cout << "======================================"<<endl;
 
     Coche* coche= new Coche("ABC123",3);
+    vehiculos.push_back(coche);
     Moto* moto= new Moto("XYZ45A", 125);
+    vehiculos.push_back(moto);
     Bus* bus = new Bus("BUS777",38);
+    vehiculos.push_back(bus);
     Camion* camion= new Camion("CAM301",3);
+    vehiculos.push_back(camion);
 
     miCaseta->asignarOperador(op);
 
@@ -44,7 +51,8 @@ int main() {
     cout<<"==================CASO 2================="<<endl;
     coche->asignarPropietario(pVec);
     cout << *coche;
-    miCaseta->cobrarPeaje(coche);
+    miCaseta->cobrarPeaje(coche); //para el caso 10
+    vehiculos.push_back(coche);
     miCaseta->getRegistro()[0]->info();
     cout<<"========================================"<<endl;
 
@@ -53,6 +61,7 @@ int main() {
     moto->asignarPropietario(pVec);
     cout << *moto;
     miCaseta->cobrarPeaje(moto);
+    vehiculos.push_back(moto);
     miCaseta->getRegistro()[1]->info();
     cout<<"========================================"<<endl;
 
@@ -62,6 +71,7 @@ int main() {
     moto->setPlaca("MOT650");
     moto->setCilindraje(650);
     cout << *moto;
+    vehiculos.push_back(moto);
     cout << "Tarifa: "<< moto->calcTarifa()<<endl;
     cout<<"========================================"<<endl;
     
@@ -70,6 +80,7 @@ int main() {
     bus->asignarPropietario(pVec);
     cout << *bus;
     miCaseta->cobrarPeaje(bus);
+    vehiculos.push_back(bus);
     miCaseta->getRegistro()[2]->info();
     cout<<"========================================"<<endl;
 
@@ -84,7 +95,6 @@ int main() {
     camion->setEjes(4);
     cout << *camion;
     miCaseta->cobrarPeaje(camion);
-    miCaseta->getRegistro()[3]->info();
     cout<<"========================================"<<endl;
 
     //CASO 8
@@ -127,9 +137,6 @@ int main() {
 
     //librerando memoria empezando por caseta, luego vehiculos a traves de vehiculo* y finalmente personas
     delete miCaseta;
-    
-    delete pVec;
-    delete op;
-
-
+    for(Vehiculo* v: vehiculos){delete v;}
+    for(Persona* h: humanidad){delete h;}
 }
