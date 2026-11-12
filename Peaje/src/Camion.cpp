@@ -5,7 +5,7 @@ Camion::Camion(): Vehiculo(), ejes(2){}
 Camion::Camion(string placa, unsigned int ejes) : Vehiculo(placa){
     try{
         if(ejes>3){throw ExcepcionDatosInvalidos("un camión no puede tener mas de 3 ejes");}
-        if(ejes<1){throw ExcepcionDatosInvalidos("un camión no puede tener menos de 1 eje");}
+        if(ejes<2){throw ExcepcionDatosInvalidos("un camión no puede tener menos de 2 ejes");}
         this->ejes=ejes;
     }catch(const exception& e){cout << "Error: " << e.what() << endl;}
 }
@@ -14,7 +14,7 @@ Camion::Camion(string placa, unsigned int ejes) : Vehiculo(placa){
 void Camion::setEjes(unsigned int ejes){
     try{
         if(ejes>3){throw ExcepcionDatosInvalidos("un camión no puede tener mas de 3 ejes");}
-        if(ejes<1){throw ExcepcionDatosInvalidos("un camión no puede tener menos de 1 eje");}
+        if(ejes<2){throw ExcepcionDatosInvalidos("un camión no puede tener menos de 2 ejes");}
         this->ejes=ejes;
     }catch(const exception& e){cout << "Error: " << e.what() << endl;}
 }

@@ -49,5 +49,6 @@ class Caseta{
     //Metodos
     void agregarRegistro(Registro*);
     void cobrarPeaje(Vehiculo*);
+    string infoCategoriasRegistradas();
     ~Caseta();
 };

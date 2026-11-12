@@ -40,4 +40,11 @@ void Caseta::cobrarPeaje(Vehiculo* unVehiculo){
     agregarRegistro(r);
 }
 
+string Caseta::infoCategoriasRegistradas(){
+    return "Coches Registrados: " + to_string(getCochesRegistrados()) + "\n" 
+    + "Camiones Registrados: " + to_string(getCamionesRegistrados()) + "\n"
+    + "Motos Registradas: " + to_string(getMotosRegistrados()) + "\n" +
+    "Buses Registrados: " + to_string(getBusesRegistrados())+"\n";
+}
+
 Caseta::~Caseta(){}
