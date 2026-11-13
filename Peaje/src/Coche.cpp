@@ -34,4 +34,4 @@ int Coche::calcTarifa()const{
     return tarifa;
 }
 string Coche::info()const{return Vehiculo::info() + " | Pasajeros: " + to_string(pasajeros);}
-Coche::~Coche(){cout << getTipo()<<" "<< placa<<endl;}
+Coche::~Coche(){cout << getTipo()<<" "<< getPlaca()<<endl;}

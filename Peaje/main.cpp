@@ -24,7 +24,7 @@ int main() {
     cout << pVec->descripcionPersona()<<endl;
     humanidad.push_back(pVec);
     cout<<"========================================"<<endl;
-    Propietario* pNoVec= new Propietario("2529222222","Carlos","03/15/2004",0);
+    Propietario* pNoVec= new Propietario("2529222222","Maria","03/15/2004",0);
     cout << pNoVec->descripcionPersona()<<endl;
     humanidad.push_back(pNoVec);
     cout << "======================================"<<endl;
@@ -53,7 +53,7 @@ int main() {
     cout << *coche;
     miCaseta->cobrarPeaje(coche); //para el caso 10
     vehiculos.push_back(coche);
-    miCaseta->getRegistro()[0]->info();
+    cout << miCaseta->getRegistro()[0]->info()<<endl;
     cout<<"========================================"<<endl;
 
     //CASO 3
@@ -62,7 +62,7 @@ int main() {
     cout << *moto;
     miCaseta->cobrarPeaje(moto);
     vehiculos.push_back(moto);
-    miCaseta->getRegistro()[1]->info();
+    cout << miCaseta->getRegistro()[1]->info()<<endl;
     cout<<"========================================"<<endl;
 
     //CASO 4
@@ -81,13 +81,13 @@ int main() {
     cout << *bus;
     miCaseta->cobrarPeaje(bus);
     vehiculos.push_back(bus);
-    miCaseta->getRegistro()[2]->info();
+    cout<< miCaseta->getRegistro()[2]->info()<<endl;
     cout<<"========================================"<<endl;
 
     //CASO 6
     cout<<"==================CASO 6================="<<endl;
     cout << *camion;
-    camion->calcTarifa();
+    cout << "Tarifa: "<< camion->calcTarifa()<<endl;
     cout<<"========================================"<<endl;
 
     //CASO 7
@@ -95,29 +95,27 @@ int main() {
     camion->setEjes(4);
     cout << *camion;
     miCaseta->cobrarPeaje(camion);
+    cout << miCaseta->getRegistro()[3]->info()<<endl;
     cout<<"========================================"<<endl;
 
     //CASO 8
     cout<<"==================CASO 8================="<<endl;
     coche->setPlaca("");
     Coche* cocheError=new Coche("",2);
-    cout << *coche;
-    cout << *cocheError;
     cout<<"========================================"<<endl;
 
     //CASO 9
     cout<<"==================CASO 9================="<<endl;
     camion->setEjes(1);
-    cout << *camion;
     cout<<"========================================"<<endl;
 
     //CASO 10
     cout<<"==================CASO 10================="<<endl;
     cout << "Total tarifa: "<< miCaseta->getTotalRegistrado()<<endl;
-    miCaseta->infoCategoriasRegistradas();
+    cout << miCaseta->infoCategoriasRegistradas()<<endl;
     cout<<"========================================"<<endl;
 
-    //CASO 11/12 (opcional) 
+    //CASO 11/12 (opcional)
     cout<<"==================CASO 11================="<<endl;
     int monto,dif;
     int total = miCaseta->getTotalRegistrado();

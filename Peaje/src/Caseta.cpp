@@ -20,6 +20,7 @@ int Caseta::getCochesRegistrados(){return cochesRegistrados;}
 int Caseta::getCamionesRegistrados(){return camionesRegistrados;}
 int Caseta::getMotosRegistrados(){return motosRegistradas;}
 int Caseta::getBusesRegistrados(){return busesRegistrados;}
+int Caseta::getTotalRegistrado(){return totalRegistrado;}
 Operador* Caseta::getOperador(){return operador;}
 vector<Registro*> Caseta::getRegistro(){return registros;}
 

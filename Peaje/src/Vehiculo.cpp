@@ -27,7 +27,7 @@ string Vehiculo::getPlaca(){return placa;}
 Propietario* Vehiculo::getPropietario(){return propietario;}
 
 //metodos
-Vehiculo::~Vehiculo(){}
+Vehiculo::~Vehiculo(){"Destruyendo Vehiculo: ";}
 string Vehiculo::getTipo()const{ return "Vehículo: ";}
 string Vehiculo::info()const{return getTipo()+ "| Placa: " + placa ;}
 int Vehiculo::calcTarifa()const{};
