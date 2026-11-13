@@ -1,10 +1,13 @@
+/**
+ * @file Registro.hpp
+ * @brief Clase Registro que representa un registro de paso en la caseta.
+ */
 #pragma once
 #include <iostream>
 #include <string>
 using namespace std;
 
-/*La caseta guarda un registro
-del paso con la placa, la categoría y el valor cobrado en ese momento.*/
+/** @brief Clase Registro que representa un registro de paso en la caseta*/
 class Registro{
     private:
     string placa;
@@ -30,4 +33,3 @@ class Registro{
     string info()const;
     ~Registro();
 };
-ostream &operator << (ostream, Registro);

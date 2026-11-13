@@ -1,6 +1,12 @@
-#pragma once
-#include "Persona.hpp"
+/**
+ * @file Propietario.hpp
+ * @brief Clase Propietario que hereda de Persona y representa a un propietario de un coche.
+ */
 
+#pragma once
+/** @brief Nombre del archivo .hpp de Propietario */
+#include "Persona.hpp"
+/** @brief Clase Propietario que hereda de Persona y representa a un propietario de un coche */
 class Persona;
 class Coche;
 class Propietario : public Persona{

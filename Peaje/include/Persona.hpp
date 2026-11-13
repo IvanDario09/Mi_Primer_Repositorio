@@ -1,8 +1,12 @@
+/**
+ * @file Persona.hpp
+ * @brief Clase Persona que representa a una persona con atributos básicos.
+ */
+
 #pragma once
 #include <iostream>
 #include <string>
 using namespace std;
-
 class Persona{
     protected:
     string id;

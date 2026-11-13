@@ -1,3 +1,6 @@
+/**
+ * @file Vehiculo.hpp
+ * @brief Clase Vehiculo */
 #pragma once
 #include <iostream>
 #include <string>
@@ -6,7 +9,7 @@
 using namespace std;
 
 class Propietario;
-
+/** @brief Clase abstracta para herencia*/
 class Vehiculo{
     protected:
     string placa;
@@ -31,5 +34,5 @@ class Vehiculo{
     virtual string getTipo()const = 0;
     virtual string info()const;
 };
-
+/** @brief Operador de salida para imprimir información de un vehículo con cout */
 ostream &operator << (ostream &os, Vehiculo &unVehiculo);

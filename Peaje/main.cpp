@@ -1,14 +1,43 @@
+/**
+* @file main.cpp
+* @brief Programa principal para la simulación de un sistema de peaje, utilizando herencia
+* y polimorfismo en C++, junto a apuntadores y manejo de memoria dinámica con archivos hpp y cpp.
+*
+* @note En este programa se evaluo todo a traves de una hoja de casos prueba, anexado en la carpeta del proyecto
+* la unica información solicitada al usuario es el monto del dia, para verificar si hay un descuadre de caja, 
+* posibles errores en couts debido a uso de tildes. 
+* @author Iván Dario Cañas Quibano <ivancanas@unicauca.edu.co>
+*
+* @brief Nombre del archivo .hpp de Persona */
 #include "Persona.hpp"
+/** @brief Nombre del archivo .hpp de Caseta */
 #include "Caseta.hpp"
+/** @brief Nombre del archivo .hpp de Registro */
 #include "Registro.hpp"
+/** @brief Nombre del archivo .hpp de Coche */
 #include "Coche.hpp"
+/** @brief Nombre del archivo .hpp de Moto */
 #include "Moto.hpp"
+/** @brief Nombre del archivo .hpp de Camion */
 #include "Camion.hpp"
+/** @brief Nombre del archivo .hpp de Bus */
 #include "Bus.hpp"
+/** @brief Nombre del archivo .hpp de Propietario */
 #include "Propietario.hpp"
+/** @brief Nombre del archivo .hpp de Operador */
 #include "Operador.hpp"
+/** @brief Nombre del archivo .hpp de Exceptions */
 #include "Exceptions.hpp"
 
+/**
+ * @brief Ejecuta la hoja de casos para el programa.
+ *
+ * Crea 2 vectores, uno para almacenar los apuntadores de 
+ * tipo Persona y otro para almacenar los apuntadores de tipo Vehiculo.
+ * Utiliza un un objeto de cada clase y los modifica según el caso. 
+ *
+ * @return 0 cuando el programa finaliza correctamente.
+ */
 int main() {
     //Requisitos para los casos;
     vector<Persona*> humanidad;
@@ -139,4 +168,5 @@ int main() {
     for(Persona* h: humanidad){delete h;}
     vehiculos.clear();
     humanidad.clear();
+    return 0;
 }

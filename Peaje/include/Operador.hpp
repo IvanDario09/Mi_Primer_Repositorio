@@ -1,6 +1,9 @@
+/**
+ * @file Operador.hpp
+ * @brief Clase Operador que hereda de Persona.
+ */
 #pragma once
 #include "Persona.hpp"
-
 class Operador : public Persona{
     private:
     string codigo;

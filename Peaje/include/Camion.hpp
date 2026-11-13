@@ -1,7 +1,9 @@
+/** @file Camion.hpp
+ * @brief Clase Camion que hereda de Vehiculo.*/
 #pragma once
+/** @brief Nombre del archivo .hpp de camion */
 #include "Vehiculo.hpp"
 using namespace std;
-
 class Camion: public Vehiculo{
     private:
     unsigned int ejes;

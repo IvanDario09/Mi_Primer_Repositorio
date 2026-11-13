@@ -1,12 +1,15 @@
+/** 
+ * @file Caseta.hpp
+ * @brief Clase Caseta que representa una caseta de peaje.
+ */
+
 #pragma once
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
-/*La caseta sabe cuántos
-pasos lleva, cuánto dinero ha recaudado y cuántos vehículos de cada categoría han pasado.*/
-
+/** @brief Declaración de las clases relacionadas con Caseta */
 class Vehiculo;
 class Registro;
 class Operador;

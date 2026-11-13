@@ -1,7 +1,10 @@
+/** 
+ * @file Coche.hpp
+ * @brief Clase Coche que hereda de Vehiculo.
+ */
 #pragma once
 #include "Vehiculo.hpp"
 using namespace std;
-
 class Coche: public Vehiculo{
     private:
     unsigned int pasajeros;

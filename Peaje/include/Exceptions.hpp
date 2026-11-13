@@ -1,9 +1,13 @@
+/** 
+ * @file Exceptions.hpp
+ * @brief Definición de las clases de excepciones personalizadas.
+ */
 #pragma once
 #include <exception>
 #include <string>
 using namespace std;
-
 //Son tres: placa inválida, datos inválidos y descuadre de caja.
+/** @brief Clase para excepciones de placa inválida */
 class ExcepcionPlaca : public exception{
     private:
     string msj;
@@ -11,7 +15,7 @@ class ExcepcionPlaca : public exception{
     ExcepcionPlaca(string);
     const char* what() const noexcept override;
 };
-
+/** @brief Clase para excepciones de datos inválidos */
 class ExcepcionDatosInvalidos : public exception{
     private:
     string msj;
@@ -20,6 +24,7 @@ class ExcepcionDatosInvalidos : public exception{
     const char* what() const noexcept override;
 };
 
+/** @brief Clase para excepciones de descuadre de caja */
 class ExcepcionDescuadreCaja : public exception{
     private:
     string msj;

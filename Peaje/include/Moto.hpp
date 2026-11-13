@@ -1,7 +1,10 @@
+/**
+ * @file Moto.hpp
+ * @brief Clase Moto que hereda de Vehiculo.
+ */
 #pragma once
 #include "Vehiculo.hpp"
 using namespace std;
-
 class Vehiculo;
 class Moto: public Vehiculo{
     private:
