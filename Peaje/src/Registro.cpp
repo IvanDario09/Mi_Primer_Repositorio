@@ -16,6 +16,6 @@ int Registro::getPrecioRegistro()const{return precioRegistro;}
 
 //Metodos
 string Registro::info()const{return "| Placa: " + placa + " | " + "Categoria:" + categoria + " | " + "Precio: " + to_string(precioRegistro);}
-Registro::~Registro(){}
+Registro::~Registro(){ cout << "Destruyendo Registro... " << endl;}
 
 ostream &operator << (ostream &os, Registro &unRegistro){return os<<unRegistro.info()<<endl;}

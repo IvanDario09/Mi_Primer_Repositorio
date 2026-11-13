@@ -137,4 +137,6 @@ int main() {
     delete miCaseta;
     for(Vehiculo* v: vehiculos){delete v;}
     for(Persona* h: humanidad){delete h;}
+    vehiculos.clear();
+    humanidad.clear();
 }

@@ -48,4 +48,6 @@ string Caseta::infoCategoriasRegistradas(){
     "Buses Registrados: " + to_string(getBusesRegistrados())+"\n";
 }
 
-Caseta::~Caseta(){cout << "TODOS LOS PROCESOS TIENEN UN INICIO Y FIN, PORQUE TODO LO QUE NACE, TIENE QUE MORIR... (destruyendo caseta)"<<endl;}
+Caseta::~Caseta(){cout << "TODOS LOS PROCESOS TIENEN UN INICIO Y FIN, PORQUE TODO LO QUE NACE, TIENE QUE MORIR... (destruyendo caseta)"<<endl;
+    for(int i=0; i<registros.size(); i++){delete registros[i];}
+    registros.clear();}
