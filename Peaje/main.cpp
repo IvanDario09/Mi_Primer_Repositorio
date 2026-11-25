@@ -28,6 +28,8 @@
 #include "Operador.hpp"
 /** @brief Nombre del archivo .hpp de Exceptions */
 #include "Exceptions.hpp"
+/** @brief Nombre del archivo .hpp de Ambulancia */
+#include "Ambulancia.hpp"
 
 /**
  * @brief Ejecuta la hoja de casos para el programa.
@@ -161,6 +163,24 @@ int main() {
 
     //CASO 13(opcional)
     cout << "FINALIZANDO PROGRAMA"<<endl;
+
+
+     //ESTO NO FORMA PARTE DE LA HOJA DE CASOS
+    cout <<"================================================="<<endl;
+    Ambulancia* ambulancia = new Ambulancia("AMB123","A-001","un carrito de juguete que rescato a iron man de la muerte durante la segunda guerra mundial, envuiado por Trump para destruir las fuerzas malvadas sith");
+    ambulancia->asignarPropietario(pNoVec);
+    cout << *ambulancia;
+    cout << "Tarifa: "<< ambulancia->calcTarifa()<<endl;
+    cout<<"=================================================="<<endl;
+    ambulancia->asignarPropietario(pVec);
+    cout << *ambulancia;
+    cout << "Tarifa: " << ambulancia->calcTarifa()<<endl;
+    cout << "================================================"<<endl;
+    ambulancia->setEmergencia(true);
+    cout<< *ambulancia;
+    cout << "Tarifa: " << ambulancia->calcTarifa()<<endl;
+    cout <<"================================================="<<endl;
+
 
     //librerando memoria empezando por caseta, luego vehiculos a traves de vehiculo* y finalmente personas
     delete miCaseta;

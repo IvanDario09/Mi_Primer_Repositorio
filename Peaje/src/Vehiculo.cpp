@@ -46,7 +46,7 @@ string Vehiculo::getTipo()const{ return "Vehículo: ";}
 string Vehiculo::info()const{return getTipo()+ "| Placa: " + placa ;}
 /** @brief calculo de tarifa 
  * @return entero con el valor de la tarifa funcion a heredar;*/
-int Vehiculo::calcTarifa()const{};
+int Vehiculo::calcTarifa()const{return 0;};
 /** @brief destructor de la clase vehículo */
 Vehiculo::~Vehiculo(){"Destruyendo Vehiculo: ";}
 
